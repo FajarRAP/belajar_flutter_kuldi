@@ -50,15 +50,15 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Consumer<HTTPProvider>(
-              builder: (context, value, child) => Text(
+            Consumer<HTTPProvider>(builder: (context, value, child) {
+              return Text(
                 (value.data["createdAt"] != null)
                     ? "Dibuat pada : ${value.data["createdAt"]}"
                     : "Dibuat pada : Belum Ada",
                 style: const TextStyle(fontSize: 24),
                 textAlign: TextAlign.center,
-              ),
-            ),
+              );
+            }),
             const SizedBox(
               height: 50,
             ),
